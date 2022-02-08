@@ -1,0 +1,106 @@
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollViewID"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/mainpage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.samsung.knox.example.gettingstarted.MainActivity">
+
+        <TextView
+            android:id="@+id/logview_id"
+            android:gravity="bottom"
+            android:layout_width="320dp"
+            android:layout_height="230dp"
+            android:textColor="#3F51B5"
+            android:background="@drawable/background"
+            android:scrollbars="vertical"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/toggleAdminBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/activate_admin"
+            android:layout_below="@+id/logview_id"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/activateLicenseBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/toggleAdminBtn"
+            android:layout_below="@+id/toggleAdminBtn"
+            android:text="@string/activate_license" />
+
+        <Button
+            android:id="@+id/deactivateLicenseBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activateLicenseBtn"
+            android:layout_centerHorizontal="true"
+            android:text="Deactivate license" />
+
+        <Button
+            android:id="@+id/activateBackwardsCompatibleKeyBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/deactivateLicenseBtn"
+            android:layout_centerHorizontal="true"
+            android:text="Activate backwards compatible key"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/StandardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activateBackwardsCompatibleKeyBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="Call Standard permission API" />
+
+        <Button
+            android:id="@+id/toggleCameraBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/StandardText"
+            android:layout_centerHorizontal="true"
+            android:text="@string/toggle_camera" />
+
+        <TextView
+            android:id="@+id/premiumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleCameraBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:text="Call Premium permission API" />
+
+        <Button
+            android:id="@+id/toggleTimaKeystoreState"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/premiumText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20px"
+            android:text="@string/toggle_tima_state" />
+
+        <Button
+            android:id="@+id/addWidget"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggleTimaKeystoreState"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20px"
+            android:text="@string/add_widget" />
+
+    </RelativeLayout>
+
+</ScrollView>
